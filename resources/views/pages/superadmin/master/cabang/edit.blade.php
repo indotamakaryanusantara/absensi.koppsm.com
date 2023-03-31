@@ -17,7 +17,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{ route('superadmin-cabang.update', $item->id) }}" method="post"
+                            <form action="{{ route('cabang.update', $item->id) }}" method="post"
                                 enctype="multipart/form-data" class="needs-validation" novalidate="">
                                 @method('PUT')
                                 @csrf

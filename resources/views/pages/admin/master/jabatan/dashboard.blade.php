@@ -42,7 +42,7 @@
                                                             <div class="badge badge-danger">Tidak Aktif</div>
                                                         @endif
                                                     </td>
-                                                    <td><a href="{{ route('admin-jabatan.edit', $item->slug) }}"
+                                                    <td><a href="{{ route('jabatan.edit', $item->slug) }}"
                                                             class="btn btn-primary">Edit Data</a>
                                                         <button class="btn btn-danger deleted"
                                                             data-id="{{ $item->id }}">Delete</a>
@@ -72,7 +72,7 @@
                 .then((willDelete) => {
                     if (willDelete) {
                         // var id = $(this).data('id')
-                        window.location.href = "{{ route('admin-jabatan.show', ':id') }}".replace(':id', id);
+                        window.location.href = "{{ route('jabatan.show', ':id') }}".replace(':id', id);
                         swal('Poof! Your imaginary file has been deleted!', {
                             icon: 'success',
                         });

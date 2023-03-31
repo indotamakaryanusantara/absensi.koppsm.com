@@ -17,7 +17,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{ route('admin.karyawan-store') }}" method="post" enctype="multipart/form-data"
+                            <form action="{{ route('karyawan.store') }}" method="post" enctype="multipart/form-data"
                                 class="needs-validation" novalidate="">
                                 @csrf
                                 <div class="card-header">

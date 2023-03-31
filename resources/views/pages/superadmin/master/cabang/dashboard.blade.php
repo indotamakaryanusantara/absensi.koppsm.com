@@ -9,7 +9,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Daftar Data Cabang</h4>
+                                <h4>Data Cabang</h4>
                             </div>
 
                             <div class="card-body">
@@ -44,7 +44,7 @@
                                                             <div class="badge badge-danger">Tidak Aktif</div>
                                                         @endif
                                                     </td>
-                                                    <td><a href="{{ route('superadmin-cabang.edit', $item->slug) }}"
+                                                    <td><a href="{{ route('cabang.edit', $item->slug) }}"
                                                             class="btn btn-primary">Edit Data</a>
                                                         <button class="btn btn-danger deleted"
                                                             data-id="{{ $item->id }}">Delete</a>
@@ -74,7 +74,7 @@
                 .then((willDelete) => {
                     if (willDelete) {
                         // var id = $(this).data('id')
-                        window.location.href = "{{ route('superadmin-cabang.show', ':id') }}".replace(':id',
+                        window.location.href = "{{ route('cabang.show', ':id') }}".replace(':id',
                         id);
                         swal('Poof! Your imaginary file has been deleted!', {
                             icon: 'success',

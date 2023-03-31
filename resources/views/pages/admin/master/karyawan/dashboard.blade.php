@@ -38,7 +38,7 @@
                                                     <td>{{ $item->nama_lengkap }}</td>
                                                     <td>{{ $item->email }}</td>
                                                     <td>{{ $item->tmt }}</td>
-                                                    <td><a href="{{ route('admin.karyawan-edit', $item->id) }}"
+                                                    <td><a href="{{ route('karyawan.edit', $item->id) }}"
                                                             class="btn btn-primary">Edit
                                                             Data Karyawan</a>
                                                         <button class="btn btn-danger deleted"
@@ -68,7 +68,7 @@
                 })
                 .then((willDelete) => {
                     if (willDelete) {
-                        window.location.href = "{{ route('admin-user.show', ':id') }}".replace(':id', id);
+                        window.location.href = "{{ route('user.show', ':id') }}".replace(':id', id);
                         swal('Poof! Your imaginary file has been deleted!', {
                             icon: 'success',
                         });

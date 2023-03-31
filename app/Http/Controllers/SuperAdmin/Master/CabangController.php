@@ -47,7 +47,7 @@ class CabangController extends Controller
 
         Cabang::create($data);
         toast('Cabang berhasil ditambahkan!', 'success');
-        return redirect()->route('superadmin-cabang.index');
+        return redirect()->route('cabang.index');
     }
 
     /**
@@ -55,9 +55,9 @@ class CabangController extends Controller
      */
     public function show(Request $request, string $id)
     {
-        $item = Cabang::where('id', $id)->first();
-        $data['active'] = 0;
-        $item->update($data);
+        //$item = Cabang::where('id', $id)->first();
+        //$data['active'] = 0;
+        //$item->update($data);
 
         return redirect()->route('superadmin-cabang.index');
     }
@@ -88,7 +88,7 @@ class CabangController extends Controller
         $item = Cabang::findOrFail($id);
         $item->update($data);
         toast('Cabang berhasil diupdate!', 'success');
-        return redirect()->route('superadmin-cabang.index');
+        return redirect()->route('cabang.index');
     }
 
     /**

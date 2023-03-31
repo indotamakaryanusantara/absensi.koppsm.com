@@ -17,7 +17,7 @@
                                     </ul>
                                 </div>
                             @endif
-                            <form action="{{ route('superadmin-divisi.store') }}" method="post" enctype="multipart/form-data"
+                            <form action="{{ route('divisi.store') }}" method="post" enctype="multipart/form-data"
                                 class="needs-validation" novalidate="">
                                 @csrf
                                 <div class="card-header">
